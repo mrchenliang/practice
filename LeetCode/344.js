@@ -1,9 +1,11 @@
 const reverseString = function(s) {
-  let result = [];
-  for (let i = s.length - 1; i >= 0; i--) {
-          result.push(s[i])
+  let [i, j] = [0, s.length-1];
+  while(i < j){
+      [s[i], s[j]] = [s[j], s[i]];
+      i++;
+      j--;
   }
-  return result;
+  return s;
 };
 
 console.log(reverseString(["h","e","l","l","o"]));
