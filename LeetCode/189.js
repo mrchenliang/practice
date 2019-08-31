@@ -1,13 +1,10 @@
 const rotate = function(nums, k) {
-  let result = [];
-  for (var i = 0; i < nums.length; i++) {
-    if (nums[i + k]) {
-      result[i + k] = nums[i];
-    } else {
-      result[i - (nums.length - k)] = nums[i];
-    }
+  let removedElement;
+  for (let i = 0; i < k; i++) {
+    removedElement = nums.pop();
+    nums.unshift(removedElement);
   }
-  return result;
+  return nums;
 };
 
 nums = [1, 2, 3, 4, 5, 6, 7];
