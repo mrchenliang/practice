@@ -1,4 +1,4 @@
-var removeDuplicates = function(nums) {
+const removeDuplicates = function(nums) {
   let result = [];
   for (let num of nums) {
     if (result.indexOf(num) === -1) {
