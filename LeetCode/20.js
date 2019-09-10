@@ -24,4 +24,4 @@ var isValid = function(s) {
 
 };
 
-isValid("()[]{}");
+console.log(isValid("()[]{}"));
