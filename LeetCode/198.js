@@ -1,18 +1,13 @@
 const rob = function(nums) {
-  let odd = 0;
-  let even = 0;
-  for (let i = 0; i < nums.length; i++) {
-    if (i % 2 === 0) {
-      even += nums[i];
-    } else {
-      odd += nums[i];
-    }
+  if(nums.length === 0) return 0;
+  if(nums.length === 1) return nums[0];
+  let totals = [nums[0], Math.max(nums[0], nums[1])];
+  console.log(totals)
+  for(let i = 2; i < nums.length; i ++){
+      totals[i] = Math.max(totals[i - 1], totals[i - 2] + nums[i]);
+      console.log(totals[i])
   }
-  if (odd > even) {
-    return odd;
-  } else {
-    return even;
-  }
+  return totals[totals.length - 1];
 };
 
 let nums = [2, 7, 9, 3, 1];
