@@ -11,7 +11,7 @@ const isSubsequence = function(s, t) {
 
 s = "acb";
 t = "ahbgdc";
-// s = "abc"
-// t = "ahbgdc"
+s = "abc";
+t = "ahbgdc"
 
 console.log(isSubsequence(s, t));
